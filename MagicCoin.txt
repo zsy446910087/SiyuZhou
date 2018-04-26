@@ -1,0 +1,26 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args){
+                Scanner in = new Scanner(System.in);
+                int n = in.nextInt();
+ 
+                String p;
+                for(p = ""; n > 0; n /= 2) {
+                    byte x;
+                    if (n % 2 == 0) {
+                        x = 2;
+                        p =  x+p;
+                        n -= 2;
+                    } else {
+                        x = 1;
+                        p = x+p;
+                        --n;
+                    }
+                }
+ 
+                System.out.println(p);
+    }
+ 
+ 
+}
