@@ -1,0 +1,17 @@
+public class Solution {
+    public boolean Find(int target, int [][] array) {
+       int i = 0, j = array[0].length-1;
+        boolean found = false;
+ 
+        while (i < array.length && j >= 0) {
+            if(array[i][j]==target){
+                found=true;
+                break;
+            }
+            else if(array[i][j]>target)--j;
+            else ++i;
+        }
+        return found;
+ 
+    }
+}
