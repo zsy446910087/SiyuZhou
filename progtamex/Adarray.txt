@@ -1,0 +1,22 @@
+
+输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Solution {
+    public static void reOrderArray(int [] array) {
+        int a;
+        int b[]=new int[array.length];
+        int k=0;
+        int j=array.length-1;
+        for(int i=0;i<array.length;i++) {
+            if(array[i]%2==1)b[k++]=array[i];
+        }
+        for(int i=0;i<array.length;i++){
+            if(array[i]%2==0)b[k++]=array[i];
+        }
+        for(int i=0;i<array.length;i++)System.out.print(b[i]);
+    }
+
+}
